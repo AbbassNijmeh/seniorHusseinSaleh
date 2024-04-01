@@ -25,7 +25,11 @@ class HomeController extends Controller
     public function index()
     {
         $categories = Categories::all();
-        // dd($categories);
         return view('welcome', compact('categories'));
+    }
+    public function shop(){
+        return view('site.shop');
+    }  public function shopDetails(){
+        return view('site.shop-details');
     }
 }
